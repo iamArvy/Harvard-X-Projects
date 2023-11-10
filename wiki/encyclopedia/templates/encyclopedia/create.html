@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        {{ form.title.label_tag }} {{ form.title }}
+        {{ form.content.label_tag }} {{ form.content }}
+        <input type="submit">
+    </form>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

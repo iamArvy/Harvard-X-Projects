@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+*{
+    /* border: 0; */
+    margin: 0;
+    box-sizing: border-box;
+}
+.fa-magnifying-glass{
+    color: #c0c0c0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    /* padding: 0.5rem; */
+    cursor: pointer;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 13px;
+}
+a:hover{
+    border-bottom: 2px solid black;
+}
+li{
+    list-style: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+header{
+    display: flex;
+    width: 100vw;
+    justify-content: right;
+    padding: 2rem;
+}
+.red{
+    color: rgba(234, 67, 53, 1);
+}
+.blue{
+    color: rgba(66, 133, 244, 1);
+}
+.yellow{
+    color: rgba(244, 180, 0, 1);
+}
+.green{
+    color: rgba(15, 157, 88, 1);
+}

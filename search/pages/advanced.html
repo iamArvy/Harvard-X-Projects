@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/advanced.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>
+                    <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="heading">
+                <span id="adv">Advanced Search</span>
+            </div>
+            <hr>
+            <form action="https://www.google.com/search">
+                <table>
+                    <tr>
+                        <td class="label"><span id="findpages">Find pages with...</span></td>
+                        <td class="input"></td>
+                        <td class="moreinfo disappear"><span id="todo">To do this in the search box.</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="as_q">all these words:</label></td>
+                        <td><input type="text" name="as_q"></td>
+                        <td class="infotags disappear">Type the important words: <span class="extratags">tri-colour rat terrier</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="as_epq">this exact word or phrase:</label></td>
+                        <td><input type="text" name="as_epq"></td>
+                        <td class="infotags disappear">Put exact words in quotes: <span class="extratags">"rat terrier"</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="as_oq">any of these words:</label></td>
+                        <td><input type="text" name="as_oq"></td>
+                        <td class="disappear"><span class="infotags">Type OR between all the words you want: <span class="extratags">miniature OR standard</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="as_eq">none of these words:</label></td>
+                        <td><input type="text" name="as_eq"></td>
+                        <td class="disappear"><span class="infotags">Put a minus sign just before words that you don't want: <br><span class="extratags">-rodent, -"Jack Russell"</span></span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Advanced Search" style="float: right;"></td>
+                        <td class="disappear"></td>
+                    </tr>
+                </table>
+            </form> 
+            <div class="moreinfo">
+            
+            </div>
+        </main>    
+    </body>
+</html>

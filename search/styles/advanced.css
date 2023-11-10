@@ -1,0 +1,100 @@
+.logo>h1{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+body{
+    font-family: 'arial', sans-serif;
+}
+input[type='text']{
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    font-size: 16px;
+    height: 25px;
+    padding: 1px 8px;
+    width: 570px;
+}
+input[type='text']:focus{
+    outline-color: blue;
+    outline-style: solid;
+}
+#adv{
+    font-size: 20px;
+    color: #D93025;
+}
+#findpages{
+    font-size: 16px;
+}
+label{
+    font-size: 13px;
+    width: 200px;
+}
+.heading, form{
+    padding: 2rem;
+}
+/* hr{
+    border: .2px solid black;
+    outline: auto;
+} */
+header{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+tr{
+    height: 40px;
+}
+#todo{
+    font-size: 13px;
+    font-weight: 600;
+    color: #777777;
+}
+.infotags{
+    font-size: 11px;
+    color: #555555;
+    padding: 10px;
+}
+.extratags{
+    font-family: monospace;
+    color: #666666;
+}
+input[type="submit"]{
+    background-color: #4d91fef6;
+    color: white;
+    border: 1px solid #3078ede0;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+}
+.moreinfo{
+    width: 350px;
+}
+
+@media (min-width: 600px) {
+    .disappear{
+        display: none;
+    }
+}

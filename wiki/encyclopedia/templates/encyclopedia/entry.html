@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdown_filters %}
+
+
+{% block title %}
+    {{search_query}}
+{% endblock %}
+
+{% block body %}
+    <div>
+        {{contents|markdown}}
+    </div>
+
+{% endblock %}
