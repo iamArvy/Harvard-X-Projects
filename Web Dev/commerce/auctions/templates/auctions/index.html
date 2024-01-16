@@ -1,0 +1,49 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+        <h3 style="text-align: center; text-decoration: underline;">Active Listings</h3>
+        {% if listings %}
+            <section>
+                {% for listing in listings %}
+                    <a href="{% url 'listing' listing.id %}" class="link">
+                        <div class="listing">
+                            <div class="listimg">
+                                {% if listing.img %}
+                                    <img class="artimg" src="{{ listing.img }}" alt="Second Image" />
+                                {% else %}
+                                    <div class="artimg">
+                                        <span>No Image For this Listing</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="det">
+                                <span><span>{{ listing.title }}</span> -  <span>${% if listing.highestbid %}{{ listing.highestbid.amount }}{% else %}{{ listing.startprice }}{% endif %}.00</span></span>
+                                {% if listing.cat %}
+                                    <span>Category -{{ listing.cat.name }}</span>
+                                {% endif %}
+                                {% if listing.desc %}
+                                    <p>
+                                        {{ listing.desc }}
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </section>
+        {% else %}
+            <div class="emptylist emptyindex">
+                <h1>There are currently no active listings.</h1>
+            </div>
+        {% endif %}
+        <br>
+        <h3 style="text-align: center; text-decoration: underline;">Categories</h3>
+        <div class="categories">
+            {% for category in categories %}
+                <a href="{% url 'category' category.id %}" class="category">
+                    <img src="{{ category.img }}" alt="">
+                    <span>{{ category.name }}</span>
+                </a>
+            {% endfor %}
+        </div>
+{% endblock %}

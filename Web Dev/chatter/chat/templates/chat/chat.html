@@ -1,0 +1,26 @@
+<div class="chatter">
+    <form id="chat">
+        <input type="text" name="message" id="">
+        <!-- <input type="button" value="Post" onclick="sendmessage('${id}','${type}')"> -->
+        <!-- <input type="submit" name="message"> -->
+    </form>
+    <div id="messages">
+        <!-- Messages will be inserted here dynamically -->
+    </div>
+    {% for friend in user.friends.all %}
+        <div>
+            <a href="{% url 'chat' key=friend.username %}">{{ friend.username }}</a>
+        </div>
+        <div id="chatbox" style="display: none;">
+            <h1>Chat with {{ friend.username }}</h1>
+            <div id="content">
+            </div>
+            <form id="friendchat">
+                <input type="text" name="message" id="">
+                <!-- <input type="button" value="Post" onclick="sendmessage('${id}','${type}')"> -->
+                <!-- <input type="submit" name="message"> -->
+            </form>
+        </div>
+    {% endfor %}
+    
+</div>

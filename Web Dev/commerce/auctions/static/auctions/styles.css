@@ -1,0 +1,281 @@
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    padding:0 1rem;
+  }
+.logo{
+    color: white;
+}
+main {
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+
+  }
+  span.user{
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 2px solid white;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  .categories{
+    padding: 1rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+  .category{
+    width: 300px;
+    height: 100px;
+    background: #ffffff;
+    box-shadow:  8px 8px 16px #8c8c8c,
+             -8px -8px 16px #ffffff;
+    text-decoration: none;
+    color: black;
+  }
+  .category>img{
+    height: 100px;
+    width: 100px;
+  }
+  .category>span{
+    font-weight: bolder;
+    padding: 1rem;
+  }
+  .category:hover{
+    background-color: rgb(245, 245, 245);
+    text-decoration: none;
+
+  }
+  .emptylist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    border-radius: 25px;
+    box-shadow:  8px 8px 16px #8c8c8c,
+             -8px -8px 16px #ffffff;
+  }
+
+/* Hmmm */
+
+  .namechart{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .ulist{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+  }
+  .ulist:hover{
+    border-bottom: 2px solid blue;
+    text-decoration: none;
+    color: black;
+  }
+  .ulist>img{
+    /* width: 100px; */
+    height: 100px;
+  }
+  .ulist>span{
+    font-weight: bold;
+  }
+  .board{
+    display: flex;
+    flex-direction: column;
+  }
+  .createform{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    flex-direction: column;
+    gap: 2rem
+  }
+  .createform>form{
+    width: 40vw;
+    box-shadow:  8px 8px 16px #8c8c8c,
+             -8px -8px 16px #ffffff;
+    padding: 1rem;
+  }
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cfi{
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid black;
+    /* gap: 1rem; */
+    /* justify-content: space-between; */
+  }
+  #desc{
+    border: 2px solid black;
+  }
+  .inputs>input[type=submit]:hover{
+    background-color: white;
+    color: black;
+  }
+  .inputs>input[type=submit]{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+.listing-det{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem;
+}
+.listing-img{
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+form.commenter{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 20px 0;
+}
+form.commenter>textarea{
+  width: 100%;
+  border-radius: 25px;
+  padding: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.commenter>input[type=submit]{
+  width: 100px;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid black;
+}
+.commenter>textarea::-webkit-scrollbar{
+  display: none; /* Safari and Chrome */
+}
+.comment-users{
+  background-color: #ebedf0;
+  /* display: flex; */
+  /* flex-direction: column; */
+  border-radius: 18px;
+  display: inline-block;
+  line-height: 16px;
+  margin-top: 0;
+  min-width: 0;
+  /* overflow: hidden; */
+  padding: 6px 12px 7px 12px;
+  /* max-width: 50vw; */
+}
+.comment-user{
+  font-weight: 600;
+}
+.comments{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.comment-time{
+  display: block;
+  font-size: 10px;
+}
+.bidder input[type=number]{
+  height: 50px;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid black;
+}
+.bidder input[type=submit]{
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  min-width: 100px;
+}
+.bidder input[type=submit]:hover{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+.bidder>form{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.listowner button{
+  background-color: black;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 250px;
+  font-weight: bold;
+}
+.listowner button:hover{
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+.closedlist span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+/* .comment-display{
+  display: flex;
+  flex-direction: column;
+  
+} */
+/* .listing-det */

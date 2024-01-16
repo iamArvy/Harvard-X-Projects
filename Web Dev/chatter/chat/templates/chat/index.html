@@ -1,0 +1,23 @@
+{% extends 'chat/layout.html' %}
+
+{% block body %}
+    <div id="recent-container" class="major-cont">
+        {% include 'chat/chat_rooms_list.html' %}
+    </div>
+    <div id="main-container" class="major-cont">
+        <div id="welcome" class="container">
+            {% include 'chat/welcome.html' %}
+        </div>
+        <div id="chatroom" class="container" style="display: none;">
+            {% include 'chat/chat_room.html' %}
+        </div>
+        <div id="friends" class="container" style="display: none;">
+            {% include 'chat/friends.html' %}
+        </div>
+    </div>
+    
+    <!-- <div id="results" class="container" style="display: none;">
+        <section id="resultDiv">
+        </section>
+    </div> -->
+{% endblock %}

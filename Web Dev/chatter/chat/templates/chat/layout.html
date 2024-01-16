@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+    <script src="https://kit.fontawesome.com/5c75551abc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'chat/styles.css' %}">
+    <script src="{% static 'chat/script.js' %}"></script>
+    <!-- <script src=""></script> -->
+</head>
+<body>
+    <main>
+        {% block body %}
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Search
+Notification
+in the bid view make it so that after bidding it checks if it is in the watchlist, if not it adds it to it

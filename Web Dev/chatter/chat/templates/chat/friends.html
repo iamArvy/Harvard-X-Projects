@@ -1,0 +1,34 @@
+{% load static %}
+    <section id="friend">
+        <header>
+            <div class="logo" style="gap: 10px;">
+                <span><i class="fa-solid fa-user-group fa-2xl"></i></span>
+                <h2 id="friend_name" class="capitalize">Friends</h2>
+            </div>
+            <nav>
+                <div class="navs"  id="main-nav">
+                    <button class="nav" id="chat-nav" onclick="changemainview('recent-container')"><i class="fa-solid fa-circle-left fa-2xl"></i></button>
+                    <button class="nav friendnavs" id="add-page" onclick="changefriendsview('findfriend')"><i class="fa-solid fa-user-plus fa-2xl"></i></button>
+                    <button class="nav friendnavs" id="myfriends" onclick="changefriendsview('friendlist')"><i class="fa-solid fa-user-group fa-2xl"></i></button>
+                </div>
+            </nav>
+        </header>
+        <div class="friendscontainer">
+            <div class="friends-page scroll list-flex" id="friendlist">
+            </div>
+            <div class="friends-page" id="findfriend">
+                <form method="POST" id="search-form">
+                    {% csrf_token %}
+                    <input type="text" class="text flex" name="key" placeholder="Find Friends">
+                    <button type="submit" class="cursor nobgbtn"><i class="fa-brands fa-searchengin fa-xl"></i></button>
+                </form>
+                <div id="searchlist" class="scroll list-flex">
+                </div>
+                <div id="requestlist" class="scroll list-flex">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'chat/friend.js' %}"></script>
+    
+    

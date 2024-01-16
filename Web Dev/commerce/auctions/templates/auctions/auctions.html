@@ -1,0 +1,34 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2 style="text-transform: capitalize;">{{ user.username }} auctions:</h2>
+    {% if listings %}
+        <div class="board">
+            {% for listing in listings %}
+                <a href="{% url 'listing' listing.id %}" class="ulist">
+                    <img src="{{listing.img}}" :alt="index">
+                    <div class="namechart">
+                        <span>
+                            {{ listing.title }}
+                        </span>
+                        <span>
+                            <span>Curent Price: </span>
+                            <span>${% if listing.highestbid %}{{ listing.highestbid.amount }}{% else %}{{ listing.startprice }}{% endif %}.00</span>
+                        </span>
+                        <span>
+                            {% if listing.is_active %}
+                            Active
+                            {% else %}
+                            Closed
+                            {% endif %}
+                        </span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="emptylist">
+            <h3>You haven't created any Auctions</h3>
+        </div>
+    {% endif %}
+{% endblock %}

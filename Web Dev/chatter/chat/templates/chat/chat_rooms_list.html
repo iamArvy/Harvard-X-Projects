@@ -1,0 +1,31 @@
+{% load static %}
+    <section id="chatlistSection" class="les">
+            <header>
+                <div class="logo">
+                    <div class="img-pfp">
+                        <div class="pfp-img cursor" id="current-user-pfp">
+                            {% if user.pfp %}
+                                <img src="{{user.pfp.url}}" alt="no img" class="pfp" id="header-img">
+                            {% else %}
+                                <img src="{% static 'chat/default.jpeg' %}" alt="no img" class="pfp" id="header-img">
+                            {% endif %}
+                        </div>
+                        <form action="{% url 'changepfp' %}" method="post" style="display: none;" id="pfpform" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="file" id="pfp-changer" accept="image/*" name="image" >
+                        </form>
+                    </div>
+                    <h3 style="text-transform: capitalize;">{{user.username}}</h3>
+                </div>
+                <nav>
+                    <div class="navs">
+                        <!-- <button class="nav" id="chat-nav">Chat</button> -->
+                        <button class="nav" id="friends-nav"><i class="fa-solid fa-user-group fa-2xl"></i></button>
+                        <a href="{% url 'logout' %}"><button class="nav" id="friends-nav"><i class="fa-solid fa-right-from-bracket fa-2xl"></i></button></a>
+                    </div>
+                </nav>
+            </header>
+            <div id="chat-list" class="scroll">
+            </div>
+        </section>
+    <script src="{% static 'chat/list.js' %}"></script>
